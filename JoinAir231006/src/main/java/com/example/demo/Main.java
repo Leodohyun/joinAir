@@ -7,6 +7,7 @@ public class Main {
 		System.out.println("new project!!");
 		System.out.println("정인 수정");
 		System.out.println("성현 수정");
+		System.out.println("재영 수정");
 
 	}
 
