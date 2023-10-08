@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+
+@media only screen and (max-width: 767px) {
+
+/* ****************************************************
+
+layout.css
+
+1: layout common setting
+2: header
+3: footer
+4: main
+5: sideNav
+99: extra
+
+***************************************************** */
+
+/*1: layout common setting
+=========================================*/
+/* container */
+
+
+
+
+body{
+ font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック","MS PGothic", sans-serif;
+ color:#333333;
+ font-size:13px;
+ line-height:1.6;
+}
+
+
+
+
+/*2: header
+=========================================*/
+
+.iconNaviArea{
+	background:url(/in/common/img/com_bg01.png) repeat;
+}
+.iconNaviArea ul{
+	margin-bottom:0px;
+}
+.iconNaviArea ul li{
+	float:left;
+	width:33.3%;
+	border-top:1px solid #FFF;
+	border-right:1px solid #FFF;
+	text-align:center;
+}
+.iconNaviArea ul li a{
+	display:block;
+	font-weight:12px;
+	color:#FFF;
+	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:8px;
+}
+.iconNaviArea ul li:nth-child(3n){
+	width:33.4%;
+	border-right:none;
+}
+.iconNaviArea ul li dt img{
+	width:56px;
+	height:auto;
+}
+#globalHeader{
+	height:56px;
+}
+#head{
+	background:url(/in/common/img/com_bg01.png) repeat;
+	height:56px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	z-index:8000;
+box-shadow:rgba(35, 36, 36, 0.368627) 0px 3px 8px 0px;
+-webkit-box-shadow:rgba(35, 36, 36, 0.368627) 0px 3px 8px 0px;
+-moz-box-shadow:rgba(35, 36, 36, 0.368627) 0px 3px 8px 0px;
+}
+#logo{
+	display:none;
+}
+#gnavi nav ul{
+	width:85%;
+}
+#gnavi nav ul li{
+	float:left;
+	width:20%;
+	display:table;
+}
+#gnavi nav ul li a{
+	display:table-cell;
+	width:100%;
+	height:56px;
+	vertical-align:middle;
+	text-align:center;
+	font-size:12px;
+	color:#FFF;
+}
+#gnavi nav ul li.on a{
+	background:#FFF;
+	color:#1e0d81;
+	font-weight:bold;
+}
+
+
+
+/*3: footer
+=========================================*/
+
+#globalFooter{
+	text-align:center;
+	padding:15px 20px 95px 20px;
+	background:#FFF;
+}
+
+.footLogo{
+	text-align:center;
+}
+.footLogo .footLogo1{
+	width:98px;
+	height:auto;
+}
+.footLogo .footLogo2{
+	width:154px;
+	height:auto;
+}
+.copy{
+	padding-top:10px;
+}
+
+#spNavLink{
+	position:absolute;
+	right:3%;
+	top:17px;
+}
+
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+	box-sizing: border-box;
+}
+.menu-trigger {
+	position: relative;
+	width: 30px;
+	height: 20px;
+}
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+	top: 8px;
+}
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+.menu-trigger.active span:nth-of-type(1) {
+	-webkit-transform: translateY(20px) rotate(-315deg);
+	transform: translateY(20px) rotate(-315deg);
+	top: -11px;
+}
+.menu-trigger.active span:nth-of-type(2) {
+	opacity: 0;
+}
+.menu-trigger.active span:nth-of-type(3) {
+	-webkit-transform: translateY(-20px) rotate(315deg);
+	transform: translateY(-20px) rotate(315deg);
+	bottom: -12px;
+}
+
+
+/*4: main
+=========================================*/
+
+.mainPhotoArea{
+	height:488px;
+	background:url(/in/common/img/com_bg40.jpg) no-repeat center top;
+	background-size:884px auto;
+}
+.mainPhotoAreaIn{
+	display:table;
+	width:100%;
+	padding-left:20px;
+	padding-right:20px;
+	height:488px;
+}
+.mainPhotoAreaHead{
+	display:table-cell;
+	width:100%;
+	height:auto;
+	vertical-align:middle;
+	text-align:center;
+}
+.mainPhotoHeadIn{
+	background:url(/in/common/img/com_bg41.png) repeat;
+	font-size:12px;
+	color:#1e0d81;
+	text-align:center;
+	line-height:1.6;
+	padding:25px 10px 25px 10px;
+}
+.mainPhotoAreaLogo{
+	margin-bottom:15px;
+}
+.mainPhotoAreaLogo li img{
+	width:98px;
+	height:auto;
+}
+.mainPhotoAreaLogo li{
+	display:inline-block;
+	margin-left:9px;
+	margin-right:9px;
+}
+
+.videoArea{
+	display:none !important;
+}
+.anime01{
+	display:none !important;
+}
+.topBg4{
+	display:none !important;
+}
+
+
+
+/*5: aside
+=========================================*/
+
+#spNavBlock{
+	position:fixed;
+	z-index:8001;
+	top:56px;
+	right:-100%;
+	width:90%;
+	background:#f2f2f2;
+	height:100%;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+box-shadow:rgba(89, 89, 89, 0.65098) -4px 6px 7px -1px;
+-webkit-box-shadow:rgba(89, 89, 89, 0.65098) -4px 6px 7px -1px;
+-moz-box-shadow:rgba(89, 89, 89, 0.65098) -4px 6px 7px -1px;
+}
+#spNavBlock.open{
+	right:0%;
+}
+.spSlideNav li a{
+	display:block;
+	color:#0c196c;
+	font-size:15px;
+	padding-left:60px;
+	background:url(/in/common/img/com_ic20.png) no-repeat 15px 50%;
+	background-size:42px 42px;
+	text-align:center;
+	padding-top:4px;
+	padding-bottom:3px;
+	border-bottom:1px solid #cdcdcd;
+}
+.spSlideNav li:nth-child(2) a{
+	background-image:url(/in/common/img/com_ic21.png);
+}
+.spSlideNav li:nth-child(3) a{
+	background-image:url(/in/common/img/com_ic22.png);
+}
+.spSlideNav li:nth-child(4) a{
+	background-image:url(/in/common/img/com_ic23.png);
+}
+.spSlideNav li:nth-child(5) a{
+	background-image:url(/in/common/img/com_ic24.png);
+}
+.spSlideNav li:nth-child(6) a{
+	background-image:url(/in/common/img/com_ic25.png);
+}
+
+.spSlideNav li a span{
+	display:block;
+	padding-top:16px;
+	padding-bottom:15px;
+	padding-right:28px;
+	background:url(/in/common/img/com_ic26.png) no-repeat right 50%;
+	background-size:26px 18px;
+}
+
+
+
+/*99: extra
+=========================================*/
+
+.pageTopBtn{
+	position:fixed;
+	z-index:8000;
+	right:19px;
+	bottom:20px;
+	display:none;
+}
+.pageTopBtn a{
+	display:block;
+	width:64px;
+	height:64px;
+	background:url(/in/common/img/com_ic19.png) no-repeat;
+	background-size:64px 64px;
+}
+.pageTopBtn a span{
+	display:none;
+}
+
+
+.snsBox01{
+	display:none !important;
+}
+.spSNS{
+	padding:8px 20px 2px;
+	text-align:center;
+}
+.spSNS ul{
+	display:inline-block;
+	margin:0 auto;
+}
+.spSNS ul li{
+	margin:4px;
+	display:inline-block;
+}
+
+.spSNSNavi{
+	margin-top:5px;
+}
+.spSNSNavi li{
+	text-align:center;
+	margin-bottom:3px;
+}
+.spSNSNavi li div.bdsharebuttonbox{
+	text-align:center;
+}
+.spSNSNavi li div.bdsharebuttonbox > a{
+	float:none !important;
+	display:inline-block !important;
+}
+
+
+
+/*=================================
+
+	clearfix
+
+=================================*/
+.iconNaviArea ul:after,
+#gnavi nav ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+}

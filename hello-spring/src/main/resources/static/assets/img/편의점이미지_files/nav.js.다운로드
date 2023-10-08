@@ -1,0 +1,21 @@
+
+
+
+
+$(document).ready(function(){
+var nav    = $('.iconNaviBox'),
+    offset = nav.offset();
+  if($(window).scrollTop() > offset.top - 0) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top - 0) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+});
+
