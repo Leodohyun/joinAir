@@ -1,0 +1,21 @@
+
+$(document).ready(function(){
+
+var snsDe = $(".snsBox01").html();
+
+if($("body").hasClass('sp')){
+$(".snsBox01").remove();
+$(".spSNSNavi").html(snsDe);
+}
+
+var nowURL = window.location.href;
+
+$(".kakaostory-share-button").attr("kakaostory-share-button",nowURL)
+
+});
+
+
+
+
+
+

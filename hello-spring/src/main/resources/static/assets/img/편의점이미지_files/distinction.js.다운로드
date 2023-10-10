@@ -1,0 +1,44 @@
+$(document).ready(function(){
+
+var ua = navigator.userAgent;
+var isIE = ua.match(/msie/i),
+    isIE6 = ua.match(/msie [6.]/i),
+    isIE7 = ua.match(/msie [7.]/i),
+    isIE8 = ua.match(/msie [8.]/i),
+    isIE9 = ua.match(/msie [9.]/i),
+    isIE10 = ua.match(/msie [10.]/i);
+if (isIE) {
+    $("body").addClass('ie');
+    if (isIE6) {
+        $("body").addClass('ie6');
+    } else if (isIE7) {
+        $("body").addClass('ie7');
+    } else if (isIE8) {
+        $("body").addClass('ie8');
+    } else if (isIE9) {
+        $("body").addClass('ie9');
+    } else if (isIE10) {
+        $("body").addClass('ie10');
+    } else {
+				$("body").addClass('normal');
+		}
+}else{
+				$("body").addClass('excepting');
+}
+
+var ww = $(window).width();
+
+if(ww > 767){
+//if((navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') == -1) || navigator.userAgent.indexOf('iPad') > 0){
+	//tab
+	$("body").addClass('tab');
+	$("body").addClass('pc');
+	$("head").append('<meta name="viewport" content="width=1040px,initial-scale=1.0">');
+}else{
+	//sp
+	$("body").addClass('sp');
+	$("head").append('<meta name="viewport" content="width=device-width,initial-scale=1.0">');
+}
+});
+
+
